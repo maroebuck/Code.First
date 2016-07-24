@@ -18,7 +18,7 @@ export class DataService {
     }
 
     getItems() {
-        this.http.get('api/character').map((res: Response) => res.json()).subscribe(items => {
+        this.http.get('api/codefirst').map((res: Response) => res.json()).subscribe(items => {
             this._collectionObserver.next(items);
         });
     }

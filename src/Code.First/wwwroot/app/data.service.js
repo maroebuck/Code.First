@@ -40,7 +40,7 @@ System.register(['@angular/core', '@angular/http', 'rxjs/add/operator/map', 'rxj
                 }
                 DataService.prototype.getItems = function () {
                     var _this = this;
-                    this.http.get('api/character').map(function (res) { return res.json(); }).subscribe(function (items) {
+                    this.http.get('api/codefirst').map(function (res) { return res.json(); }).subscribe(function (items) {
                         _this._collectionObserver.next(items);
                     });
                 };
